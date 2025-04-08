@@ -27,16 +27,18 @@ int main() {
             printf("%d * %d = %d\n", num1, num2, num1 * num2);
             break;
         case 3:
-            printf("%d / %d = %d\n", num1, num2, num1 / num2);
+            if (num2 == 0) {
+                printf("0で割ることはできません\n");
+            } else {
+                printf("%d / %d = %.2f\n", num1, num2, (float)num1 / num2);
+            }
             break;
         default:
             printf("無効な選択です\n");
             break;
     }
 
+    getchar();
+    getchar();
     return 0;
 }
-    
-            
-    
-
